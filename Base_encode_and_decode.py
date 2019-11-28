@@ -3,9 +3,6 @@ import base58
 import base62
 import base64
 import base91
-import base92
-
-
 
 
 
@@ -110,7 +107,7 @@ def decode(txt):
     #base62
     try:
         base62_c_string = bytes.decode(txt)
-        base62_decode = base62.decode(base62_c_string)
+        base62_decode = base62.decodebytes(base62_c_string)
         print("[+]base62 decode: ", end="")
         print(base62_decode)
     except Exception as e:
